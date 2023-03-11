@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Consumo Eléctrico</string>
+    <string name="app_version">versión 2.2</string>
+    <string name="developer_name">Alejandro Gómez Jiménez</string>
+    <string name="label_contact_data">Datos de contacto:</string>
+    <string name="developed_by">Desarrollado por:</string>
+    <string name="author">Autor:</string>
+    <string name="app_description">Esta aplicación ha sido creada
+                                    para facilitar el cálculo de consumo
+                                    de energía eléctrica según la tarifa
+                                    de la Unión Eléctrica (UNE).\n\n
+                                    Si te gusta esta aplicación
+                                    y quieres agradecer a su autor,
+                                    que desinteresadamente la ha desarrollado,
+                                    puedes contribuir donando
+                                    desde tu saldo personal
+                                    pulsando la imagen de regalo más abajo.\n\n
+                                    Gracias por contribuir con el desarrollador.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="mail_tag">E-mail:</string>
+    <string name="mail">xandross389@yahoo.es</string>
+    <string name="phone_tag">Teléfono:</string>
+    <string name="phone">(+53) 5 438 95 34</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_factura">Factura</string>
+    <string name="about">Acerca de Consumo Eléctrico</string>
+    <string name="help">Ayuda</string>
+    <string name="consultar_saldo">Consultar saldo</string>
+    <string name="title_activity_about">Acerca de la aplicación</string>
+    <string name="title_activity_dialog_transferir_saldo">Transferir saldo</string>
+
+</resources>

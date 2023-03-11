@@ -1,0 +1,552 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:gravity="center"
+            android:text=" Desglose por rangos de consumo"
+            android:background="@color/color_fixed_factura"
+            android:layout_gravity="fill_horizontal|center"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- fila 1 Header -->
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/headerRango"
+            android:text="Rango"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headerConsumo"
+            android:layout_weight="0.30"
+            android:weightSum="1"
+            android:gravity="center"
+            android:text="Consumo"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headerPrecio"
+            android:layout_weight="0.20"
+            android:weightSum="1"
+            android:text="Precio"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headerimporte"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:text="Importe"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- fila 2 unidades de medida -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/headerRangoDesc"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:text="(Cons.)"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/headerConsumoDesc"
+            android:layout_weight="0.30"
+            android:weightSum="1"
+            android:text="(kWh)"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/headerPrecioDesc"
+            android:layout_weight="0.20"
+            android:weightSum="1"
+            android:text="(CUP) "
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/headerImporteDesc"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:text="(CUP) "
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_fixed_factura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- fila 3 -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:text=" "
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+   <ScrollView
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:orientation="vertical">
+
+           <!-- fila 4 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="1 - 100"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:paddingLeft="15dp"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango1"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="0.09"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango1"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+
+           <!-- fila 5 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="101 - 150"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango2"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="0.30"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango2"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 6 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="151 - 200"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango3"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="0.40"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango3"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 7 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="201 - 250"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango4"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="0.60"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango4"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 8 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="251 - 300"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango5"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="0.80"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango5"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 9 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="301 - 350"
+                   android:weightSum="1"
+                   android:layout_weight="0.30"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango6"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="1.50"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango6"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 10 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="351 - 500"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango7"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="1.80"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango7"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 11 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="501 - 1000"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango8"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="2.00"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango8"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 12 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:textAlignment="center">
+
+               <TextView android:text="1001 - 5000"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango9"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="3.00"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:id="@+id/valorImporteRango9"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 12 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="> 5000"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoRango10"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="5.00"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteRango10"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="center"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+           <!-- fila 12 -->
+           <LinearLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView android:text="Consumo:"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:gravity="left"
+                   android:textStyle="bold"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorConsumoTotal"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:text="0"
+                   android:gravity="center"
+                   android:textStyle="bold"
+                   android:textColor="@color/color_dynamic_totals"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView android:text="Total:"
+                   android:layout_weight="0.20"
+                   android:weightSum="1"
+                   android:textStyle="bold"
+                   android:gravity="center"
+                   android:textColor="@color/color_fixed_factura"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/valorImporteTotal"
+                   android:layout_weight="0.30"
+                   android:weightSum="1"
+                   android:text="0.00"
+                   android:textStyle="bold"
+                   android:gravity="center"
+                   android:textColor="@color/color_dynamic_totals"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>
+

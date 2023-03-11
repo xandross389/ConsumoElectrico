@@ -1,0 +1,310 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <include android:id="@+id/appbar"
+        layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Especifique los datos de la lectura"
+            />
+
+
+
+        // Anterior
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            // Lectura
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:weightSum="1"
+                android:hint="Lectura anterior"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/edtLecturaAnterior"/>
+
+            // Fecha de Lectura
+            <Button android:id="@+id/btnFechaLecturaAnterior"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:weightSum="1"
+                android:hint="Fecha"
+                android:background="@android:drawable/edit_text" />
+
+
+
+        </LinearLayout>
+
+
+        // Actual
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+
+            <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_weight="0.60"
+            android:weightSum="1"
+            android:hint="Lectura actual"
+            android:ems="10"
+            android:id="@+id/edtLecturaActual"/>
+
+            <Button android:id="@+id/btnFechaLecturaActual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:weightSum="1"
+                android:hint="Fecha"
+                android:background="@android:drawable/edit_text" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Estadísticas de consumo"
+                />
+
+            // Consumo total
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtConsumoClaculado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Consumo calculado:"
+                    android:layout_weight="0.6"
+                    android:weightSum="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtConsumoClaculadoValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0 Kw/h"
+                    android:textStyle="bold"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    />
+
+            </LinearLayout>
+
+            // Importe actual segun lectura realizada
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtImporteCalculado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.6"
+                    android:weightSum="1"
+                    android:text="Importe calculado:"
+                    />
+
+                <TextView
+                    android:id="@+id/txtImporteCalculadoValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    android:text="0 pesos"
+                    />
+
+            </LinearLayout>
+
+            // Dias leidos
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtDiasLeidos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Días leídos:"
+                    android:layout_weight="0.6"
+                    android:weightSum="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtDiasLeidosValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="No disponible"
+                    android:textStyle="bold|italic"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    />
+
+            </LinearLayout>
+
+            // Promedio consumo diario
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtPromConsDiario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Promedio diario:"
+                    android:layout_weight="0.6"
+                    android:weightSum="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtPromConsDiarioValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="No disponible"
+                    android:textStyle="bold|italic"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    />
+
+            </LinearLayout>
+
+            // Importe posible segun promedio consumo diario
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/txtPrediccionImporteMensual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Importe mensual:"
+                    android:layout_weight="0.6"
+                    android:weightSum="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txtPrediccionImporteMensualValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold|italic"
+                    android:text="No disponible"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:weightSum="1"
+                android:text="Limpiar"
+                android:id="@+id/btnLimpiar"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:weightSum="1"
+                android:text="Ver factura"
+                android:id="@+id/btnVerFactura"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

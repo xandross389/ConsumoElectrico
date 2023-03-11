@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#f44336</color>
+    <color name="color_primary_dark">#d32f2f</color>
+    <color name="color_accent">#4caf50</color>
+    <color name="color_fixed_factura">#ef5350</color>
+    <!--FF30501-->
+    <color name="color_dynamic_totals">#000000</color>
+    <color name="color_white_text">#FFFFFF</color>
+
+
+</resources>
